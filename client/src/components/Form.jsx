@@ -81,16 +81,14 @@ export default function Form({ type, state, detailData, onClose, updateDetailDat
   );
 
   useEffect(() => {
-    if (type && detailData?.field_status === 1) {
-      setFormData({
-        from_city: detailData?.from_city || "",
-        from_address: detailData?.from_address || "",
-        to_city: detailData?.to_city || "",
-        to_address: detailData?.to_address || "",
-        start_time: detailData?.start_time || "",
-        weixin: detailData?.weixin || "",
-      });
-    }
+    setFormData({
+      from_city: detailData?.from_city || "",
+      from_address: detailData?.from_address || "",
+      to_city: detailData?.to_city || "",
+      to_address: detailData?.to_address || "",
+      start_time: detailData?.start_time || "",
+      weixin: detailData?.weixin || "",
+    });
     setOpenpop(0);
     look.current = false;
   }, [type]);

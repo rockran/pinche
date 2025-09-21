@@ -47,7 +47,7 @@ function auth() {
           const { code } = ctx.request.body;
 
           if (!code) {
-            ctx.throw(401, "Invalid token");
+            ctx.throw(401, "Invalid code");
           } else {
             const { openid } = await getWxUserInfo(code);
 
