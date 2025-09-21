@@ -1,0 +1,33 @@
+{
+  "name": "pinche-koa-server",
+  "version": "1.0.0",
+  "description": "Koa Node服务接口",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "koa",
+    "node",
+    "server",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ape-node-wechatpay-v3": "^1.0.31",
+    "axios": "^1.12.1",
+    "crypto-js": "^4.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-cors": "^0.0.16",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^12.0.0",
+    "mysql2": "^3.14.4",
+    "node-schedule": "^2.1.1"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.2"
+  }
+}

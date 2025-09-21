@@ -1,0 +1,389 @@
+:global {
+  html,
+  body {
+    min-height: 100%;
+    background-color: #f2f6f9;
+  }
+  body,
+  h3,
+  h4,
+  p,
+  input {
+    margin: 0;
+    padding: 0;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: none;
+    width: 100%;
+  }
+
+  .card {
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px 0px rgba(7, 69, 25, 0.12);
+    margin: 0 20px;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 20px;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+// 关于平台
+.about {
+  h3 {
+    background: url("https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/19a4881217e241219108051738057700/1.png")
+      no-repeat;
+    background-size: 56px 56px;
+    font-weight: 600;
+    font-size: 32px;
+    color: #333333;
+    padding-left: 70px;
+    line-height: 56px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    padding: 0 18px;
+    font-size: 28rpx;
+    color: #666;
+    line-height: 34px;
+    margin-bottom: 14px;
+  }
+
+  span {
+    color: rgba(70, 204, 109, 1);
+  }
+}
+
+//去发布
+.publish {
+  margin-top: 40px;
+  padding: 30px 20px 10px;
+  background-color: #fff;
+
+  .btn {
+    font-size: 26px;
+    color: #fff;
+    background: #46cc6d;
+    border-radius: 29px;
+    padding: 0 30px;
+  }
+
+  & > div {
+    border-radius: 16px;
+    margin-bottom: 20px;
+
+    padding: 30px 30px 30px 100px;
+    font-size: 30px;
+    line-height: 56px;
+    color: #333;
+
+    background: url("https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/feee17f734424cd99206245589bc7d00/2.png")
+      no-repeat #e0fadb;
+    background-size: 56px 56px;
+    background-position: 30px 50%;
+  }
+
+  & > div:nth-child(2) {
+    background-image: url("https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/aef23ed90f044ad88a1ef0b11c35f5ae/3.png");
+  }
+
+  & > div:nth-child(3) {
+    background-image: url("https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/812f96b4c1394cb591f0171196295fb9/4.png");
+  }
+}
+
+//详情
+.detail {
+  font-size: 28px;
+  color: #666;
+  h3 {
+    font-size: 32px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .type {
+    font-size: 24px;
+    color: #46cc6d;
+    background: #e0f5d8;
+    border-radius: 25px;
+    line-height: 50px;
+    padding: 0 30px;
+  }
+  span {
+    width: 65%;
+    &.lable {
+      width: 35%;
+    }
+  }
+
+  p {
+    font-size: 30px;
+    color: #4e845d;
+    text-align: center;
+    padding: 246px 0 22px;
+    background: url("https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/e99ec4c0ab8542ce89e820c748a210c9/timesee.png")
+      no-repeat;
+    background-size: 136px 136px;
+    background-position: 50% 80px;
+  }
+  .item {
+    align-items: flex-start;
+    margin-top: 24px;
+  }
+  .last {
+    padding-bottom: 26px;
+    border-bottom: 1px dashed #dddddd;
+  }
+
+  .updataBtn {
+    width: 312px;
+    margin: 30px auto 0;
+    line-height: 58px;
+    background: #ffffff;
+    border-radius: 27px;
+    border: 2px solid #46cc6d;
+    font-size: 28px;
+    color: #4e845d;
+    text-align: center;
+  }
+}
+
+//选择器
+.selectWrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 22px;
+  grid-row-gap: 22px;
+
+  span {
+    background: #ecf1f5;
+    border-radius: 10px;
+
+    font-size: 28px;
+    color: #666;
+
+    text-align: center;
+    padding: 11px 0;
+
+    &.active {
+      background-color: #e0fadb;
+      font-size: #333;
+      font-weight: 600;
+    }
+  }
+}
+
+// 发布表单
+.formWrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: -100%;
+  transition: all 0.4s ease;
+  height: calc(100% - 120px);
+  border-radius: 20px 20px 0 0;
+  background-color: #f2f6f9;
+  z-index: 1;
+  .form {
+    height: 100%;
+    overflow: auto;
+
+    .close {
+      padding: 30px;
+      position: absolute;
+      right: 20px;
+      z-index: 9999;
+      top: 10px;
+      background: url("https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/b113fb87d53f43e8bb745c113be359b6/close.png")
+        no-repeat;
+      background-size: contain;
+    }
+    h4 {
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 24px;
+        color: #999;
+        margin-left: 20px;
+        font-weight: 400;
+      }
+    }
+
+    .address {
+      font-size: 28px;
+      color: #666;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #dddddd;
+      margin-bottom: 20px;
+      position: relative;
+      & > div:nth-child(1) {
+        display: flex;
+        align-items: center;
+        i {
+          padding: 14px;
+          background: url("https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/d9b86c7ec3d84b17849e4bb6da8e7d3d/next.png")
+            no-repeat center;
+          background-size: 100%;
+          display: inline-block;
+          transition: transform 0.2s;
+        }
+      }
+      & > div:nth-child(2) {
+        position: absolute;
+        left: -30px;
+        top: 60px;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: height 0.2s;
+        background-color: #fff;
+
+        padding: 0 30px;
+        box-shadow: 0px 2px 4px 0px rgba(7, 69, 25, 0.12);
+        & > div {
+          padding-top: 36px;
+        }
+        &::after {
+          content: "注：暂时仅支持以下城市";
+          position: absolute;
+          top: 0;
+          color: #999;
+          font-size: 24px;
+        }
+      }
+      &.open > div:nth-child(1) > i {
+        transform: rotate(90deg);
+      }
+      &.open > div:nth-child(2) {
+        height: 210px;
+      }
+    }
+
+    .lastCard {
+      padding-bottom: 180px;
+    }
+    .submitBtn {
+      height: 120px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      div {
+        margin: 20px 20px;
+        background: #46cc6d;
+        border-radius: 10px;
+        line-height: 80px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+    input {
+      height: 76px;
+      background: #ecf1f5;
+      border-radius: 16px;
+      padding: 0 30px;
+      color: #666;
+    }
+  }
+}
+
+.popMask {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 9999;
+  .confirmPay {
+    width: 512px;
+    padding-top: 200px;
+    margin-top: 30%;
+
+    background: url(https://befriend-rss-static-prod.oss-cn-hangzhou.aliyuncs.com/firstchoice/appletMaterial/e5c589eceddb4e8da69f9428dc237536/pop_bg.png)
+      no-repeat;
+    background-size: 100% 200px;
+    & > div {
+      background-color: #fff;
+      border-radius: 0 0 44px 44px;
+      padding-bottom: 40px;
+      transform: translateY(-2px);
+      h4 {
+        text-align: center;
+        padding: 28px 0 24px;
+        font-weight: 600;
+        font-size: 34px;
+        color: #3aba5f;
+      }
+      p {
+        font-weight: 400;
+        font-size: 28px;
+        color: #666666;
+        padding: 0 30px;
+        line-height: 42px;
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .tip {
+        font-size: 22px;
+        text-align: center;
+        color: rgb(243, 69, 86);
+      }
+
+      .payBtn {
+        width: fit-content;
+        padding: 0 20px;
+        margin: 34px auto 20px;
+        line-height: 66px;
+        background: #46cc6d;
+        border-radius: 16px;
+        font-weight: 400;
+        font-size: 32px;
+        color: #fff;
+        text-align: center;
+      }
+      .close {
+        color: #46cc6d;
+        font-weight: 400;
+        font-size: 32px;
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .showToast {
+    margin-top: 50%;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    font-size: 28px;
+  }
+}
