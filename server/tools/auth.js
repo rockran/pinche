@@ -11,7 +11,7 @@ class CryptoUtils {
     try {
       return CryptoJS.AES.encrypt(text, this.secretKey).toString();
     } catch (error) {
-      throw new Error(`加密失败: ${error.message}`);
+      throw new Error(`加密失败了: ${error.message}`);
     }
   }
   decrypt(encryptedText) {
