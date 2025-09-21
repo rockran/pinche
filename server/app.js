@@ -12,7 +12,7 @@ const router = new Router();
 
 app.use(bodyParser());
 
-// app.use(require("koa-cors")());
+app.use(require("koa-cors")());
 
 app.use(auth());
 
@@ -33,7 +33,7 @@ router.post("/api/getPincheRecords", async (ctx) => {
         token: cryptoUtils.encrypt(JSON.stringify({ open_id })),
         field_status: data?.field_status,
         type: data?.type,
-        from_city: data?.type,
+        from_city: data?.from_city,
         to_city: data?.to_city,
         from_address: data?.from_address,
         to_address: data?.to_address,

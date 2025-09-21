@@ -24,20 +24,22 @@ export default function Detail({ onUpdateFormPop, detailData }) {
             [{detailData.from_city}市]-{detailData.from_address}
           </span>
         </div>
-        {detailData?.to_address && (
-          <div className={`${styles.item} flex`}>
-            <span className={styles.lable}>目的地址</span>
-            <span>
-              [{detailData.to_city}市]-{detailData.to_address}
-            </span>
-          </div>
+
+        {Number(detailData?.type) !== 3 && (
+          <>
+            <div className={`${styles.item} flex`}>
+              <span className={styles.lable}>目的地址</span>
+              <span>
+                [{detailData.to_city}市]-{detailData.to_address}
+              </span>
+            </div>
+            <div className={`${styles.item} flex`}>
+              <span className={styles.lable}>上班时间</span>
+              <span>{detailData.start_time}</span>
+            </div>
+          </>
         )}
-        {detailData?.start_time && (
-          <div className={`${styles.item} flex`}>
-            <span className={styles.lable}>上班时间</span>
-            <span>{detailData.start_time}</span>
-          </div>
-        )}
+
         <div className={`${styles.item} flex ${styles.last}`}>
           <span className={styles.lable}>联系方式</span>
           <span>{detailData.weixin}</span>
